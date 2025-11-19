@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #202020;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: #202020;
+  border-radius: 8px;
+  border: 1px solid #2d2d2d;
+  padding: 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 320px;
+}
+
+.display {
+  background: #202020;
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 600;
+  padding: 32px 24px;
+  text-align: right;
+  border-radius: 8px 8px 0 0;
+  min-height: 120px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+  word-break: break-all;
+  letter-spacing: -1px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  background: #1a1a1a;
+  padding: 2px;
+  border-radius: 0 0 8px 8px;
+}
+
+.button {
+  background: #2d2d2d;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.1s ease;
+  min-height: 56px;
+}
+
+.button:hover {
+  background: #3a3a3a;
+}
+
+.button:active {
+  background: #454545;
+}
+
+.button.operator {
+  background: #3b3b3b;
+  font-size: 1.3rem;
+}
+
+.button.operator:hover {
+  background: #484848;
+}
+
+.button.function {
+  background: #2d2d2d;
+  font-size: 1.1rem;
+}
+
+.button.function:hover {
+  background: #3a3a3a;
+}
+
+.button.zero {
+  grid-column: span 1;
+}
+
+.button.equals {
+  grid-column: span 3;
+  grid-row: span 3;
+  background: #e97548;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.button.equals:hover {
+  background: #f08558;
+}
+
+.button.equals:active {
+  background: #d86538;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 400px) {
+  .calculator {
+    max-width: 100%;
+  }
+  
+  .display {
+    font-size: 3rem;
+    min-height: 100px;
+    padding: 24px 20px;
+  }
+  
+  .button {
+    padding: 18px;
+    font-size: 1.1rem;
+    min-height: 52px;
+  }
+}
